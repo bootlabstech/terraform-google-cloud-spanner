@@ -22,10 +22,6 @@ variable "force_destroy" {
   type        = bool
   description = "When deleting a spanner instance, this boolean option will delete all backups of this instance."
 }
-variable "labels" {
-  type        = map(string)
-  description = "An object containing a list of key: value pairs."
-}
 variable "database_name" {
   type        = string
   description = "The name of database"
@@ -34,12 +30,4 @@ variable "deletion_protection" {
   type        = bool
   description = "Whether or not to allow Terraform to destroy the instance"
 }
-variable "kms_key_name" {
-  type        = string
-  description = "Fully qualified name of the KMS key to use to encrypt this database."
-}
 
-variable "database_types" {
-  type        = string
-  description = "The type of the databse"
-}
