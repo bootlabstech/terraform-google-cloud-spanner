@@ -38,3 +38,8 @@ variable "kms_key_name" {
   type        = string
   description = "Fully qualified name of the KMS key to use to encrypt this database."
 }
+
+variable "database_types" {
+  type        = string
+  description = "The type of the databse"
+}

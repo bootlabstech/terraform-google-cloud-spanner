@@ -13,6 +13,7 @@ resource "google_spanner_database" "database" {
   instance            = google_spanner_instance.instance.name
   name                = var.database_name
   deletion_protection = var.deletion_protection
+  database_dialect    = var.database_types
 
   encryption_config {
     kms_key_name = var.kms_key_name
