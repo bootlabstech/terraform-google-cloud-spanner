@@ -30,4 +30,16 @@ variable "deletion_protection" {
   type        = bool
   description = "Whether or not to allow Terraform to destroy the instance"
 }
+variable "kms_key_name" {
+  type        = string
+  description = "Name of the KMS key used to encrypt the instance."
+}
+variable "no_of_databases" {
+  type        = number
+  description = "Number of the databases in the spanner."
+}
+variable "name_of_databases" {
+  type        = string
+  description = "Name of the databases in the spanner"
+}
 
