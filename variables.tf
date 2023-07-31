@@ -35,7 +35,7 @@ variable "no_of_databases" {
   description = "Number of the databases in the spanner."
 }
 variable "name_of_databases" {
-  type        = string
+  type        = list(string)
   description = "Name of the databases in the spanner"
 }
 

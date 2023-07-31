@@ -13,8 +13,8 @@ resource "google_spanner_database" "database" {
   count               = var.no_of_databases
   name                = var.name_of_databases[count.index]
   deletion_protection = var.deletion_protection
-  encryption_config   {
-    kms_key_name      = var.kms_key_name
+  encryption_config {
+    kms_key_name = var.kms_key_name
   }
 
 }
