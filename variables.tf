@@ -22,10 +22,6 @@ variable "force_destroy" {
   type        = bool
   description = "When deleting a spanner instance, this boolean option will delete all backups of this instance."
 }
-variable "database_name" {
-  type        = string
-  description = "The name of database"
-}
 variable "deletion_protection" {
   type        = bool
   description = "Whether or not to allow Terraform to destroy the instance"
