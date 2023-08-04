@@ -5,6 +5,9 @@ resource "google_spanner_instance" "instance" {
   display_name  = var.instance_name
   num_nodes     = var.num_nodes
   force_destroy = var.force_destroy
+    lifecycle {
+    ignore_changes = [labels]
+  }
 }
 
 resource "google_spanner_database" "database" {
@@ -16,6 +19,8 @@ resource "google_spanner_database" "database" {
   encryption_config {
     kms_key_name = var.kms_key_name
   }
-
+    lifecycle {
+    ignore_changes = [labels]
+  }
 }
 
